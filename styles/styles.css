@@ -165,6 +165,14 @@ h2 {
     box-shadow: 3px 4px 2px rgba(0, 0, 0, 1);
 }
 
+header {
+    padding-bottom: 100px;
+}
+
+.about-header {
+    padding-bottom: 0;
+}
+
 /* Style Product */
 
 .product {
@@ -336,5 +344,38 @@ h3 {
 }
 
 /* ------------------------------------ STYLE ABOUT ------------------------------------ */
+
+.mission-paragraph, .mentorship, .charity{
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: black;
+    margin: 20px 5vw 20px 0;
+    align-items: center;
+    padding: 5% 10%;
+    gap: 10%;
+    color: white;
+    height: fit-content;
+    min-height: 140px;
+}
+
+.mentorship {
+    margin: 20px 0 20px 5vw;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+
+.mission-paragraph, .charity {
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.side-image {
+    z-index: 10;
+    width: 190px;
+}
+
+.informationals {
+    justify-content: space-around;
+}
 
 /* ------------------------------------ STYLE PRE_ORDER ------------------------------------ */
