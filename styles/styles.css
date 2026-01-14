@@ -8,42 +8,44 @@
 
 .bar {
     position: sticky;
-    top: -5px;
+    top: -0.3125rem;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    padding-top: 10px;
-    padding-bottom: 5px;
+    padding-top: 0.625rem;
+    padding-bottom: 0.3125rem;
     background: linear-gradient(to right, #000000, #3f3f3f);
     color: black;
     gap: 5vw;
 }
 
 .logo {
-    height: 37px;
+    height: 2.3125rem;
 }
 
 .topleft-logo {
     justify-content: space-evenly;
     align-items: center;
     background-color: rgb(246, 246, 246);
-    border-radius: 100px;
-    width: 150px;
-    height: 45px;
+    border-radius: 6.25rem;
+    width: 9.375rem;
+    height: 2.8125rem;
     text-decoration: none;
     color: black;
 }
 
 nav {
-    gap: 10px;
+    gap: 0.625rem;
 }
 
 nav a {
     text-decoration: none;
+    align-content: center;
+    text-align: center;
     color: white;
     background-color: black;
-    border-radius: 100px;
-    padding: 11px;
+    border-radius: 6.25rem;
+    padding: 0.6875rem;
 }
 
 /* Style Footer */
@@ -53,63 +55,77 @@ footer {
     color: #d3d3d3;
     text-align: center;
     height: fit-content;
-    padding-top: 40px;
+    padding-top: 2.5rem;
 }
 
 footer img {
-    width: 27px;
+    width: 1.6875rem;
 }
 
-footer div:first-child {
+.social-container {
     justify-content: space-around;
+    margin: 0 auto;
+    text-align: left;
+    max-width: 90vw;
+    gap: 1rem;
 }
 
 .socials p {
-    padding-bottom: 16px;
+    padding-bottom: 1rem;
 }
 
 .social-images {
-    gap: 15px;
+    gap: 0.9375rem;
 }
 
 .contacts {
     flex-direction: column;
-    gap: 15px;
+    gap: 0.95rem;
     text-align: left;
 }
 
-.contacts div a {
+.contacts a {
     text-decoration: none;
     color: #d3d3d3;
 }
 
-.contacts div a:hover {
+.contacts a:hover {
     text-decoration: underline;
     color: white;
 }
 
-footer p:last-child{
-    padding-top: 75px;
-    padding-bottom: 30px;
+footer p:last-child {
+    padding-top: 4.6875rem;
+    padding-bottom: 1.875rem;
 }
 
+@media (max-width: 31.25rem) {
+    .social-container {
+        flex-direction: column;
+        gap: 4rem;
+        padding-left: 7vw;
+    }
+    footer {
+        padding-top: 0rem;
+    }
+}
 
 /* ------------------------------------ STYLE INDEX ------------------------------------ */
 /* Style background images */
 
 .background {
     position: fixed;
-    top: 60px;
+    top: 3.75rem;
     left: 50%;
     transform: translateX(-50%);
-    gap: clamp(0px, 50vw, 210px);
+    gap: clamp(0rem, 50vw, 13.125rem);
     z-index: -1;
     max-width: 100vw;
 }
 
 .leftpaw, .rightpaw {
     max-height: 70vh;
-    max-width: calc(50vw - 110px);
+    max-width: calc(50vw - 6.875rem);
     height: auto;
 }
 
@@ -120,70 +136,70 @@ footer p:last-child{
 /* Style introduction bits */
 
 .intro {
-    height: 360px;
+    height: 22.5rem;
     width: 100vw;
     text-align: center;
     align-content: center;
-    padding: 50px 0;
+    padding: 3.125rem 0;
 }
 
 h1 {
-    font-size: clamp(0px, 7.5vw, 70px);
-    margin-bottom: 40px;
+    font-size: clamp(0rem, 7.5vw, 4.375rem);
+    margin-bottom: 2.5rem;
     text-align: center;
 }
 
 h2 {
-    font-size: clamp(20px, 4vw, 40px);
-    padding: 13px 0;
+    font-size: clamp(1.25rem, 4vw, 2.5rem);
+    padding: 0.8125rem 0;
     text-align: center;
 }
 
 .mission p {
     max-width: 33vw;
-    font-size: clamp(0px, 2.4vw, 17px);
+    font-size: clamp(0rem, 2.4vw, 1.0625rem);
     margin: 0 auto;
-    padding-bottom: 13px;
-    line-height: 20px;
+    padding-bottom: 0.8125rem;
+    line-height: 1.25rem;
 }
 
 .intro img:first-child {
-    width: 70px;
-    margin-bottom: 10px;
+    width: 4.375rem;
+    margin-bottom: 0.625rem;
 }
 
 .mission {
     background-color: rgb(252, 231, 195);
-    border-radius: 20px;
+    border-radius: 1.25rem;
     margin: 0 auto;
-    width: clamp(0px, 32vw, 600px);
-    padding: 10px;
-    box-shadow: 3px 4px 2px rgba(0, 0, 0, 1);
+    width: clamp(0rem, 32vw, 37.5rem);
+    padding: 0.625rem;
+    box-shadow: 0.1875rem 0.25rem 0.125rem rgba(0, 0, 0, 1);
 }
 
 .mission-holder {
     padding: 0;
 }
 
-header {
-    padding-bottom: 100px;
+.index-header {
+    padding-bottom: 6.25rem;
 }
 
-@media (max-width: 1000px) {
-    header {
-        padding-bottom: 0px;
+@media (max-width: 62.5rem) {
+    .index-header {
+        padding-bottom: 0rem;
     }
     .mission {
-        width: clamp(0px, 80vw, 600px);
+        width: clamp(0rem, 80vw, 37.5rem);
     }
     .mission-holder {
         background-color: black;
         height: fit-content;
         width: 100vw;
-        padding: 50px 0;
+        padding: 3.125rem 0;
     }
     .mission p {
-        font-size: clamp(0px, 3vw, 17px);
+        font-size: clamp(0rem, 3vw, 1.0625rem);
         max-width: 90%;
     }
 }
@@ -196,51 +212,51 @@ header {
     color: white;
     flex-direction: column;
     justify-content: center;
-    padding-top: 30px;
-    padding-bottom: 50px;
+    padding-top: 1.875rem;
+    padding-bottom: 3.125rem;
 }
 
 .product img {
-    height: 250px;
-    border-radius: 10px;
+    height: 15.625rem;
+    border-radius: 0.625rem;
     align-self: center;
 }
 
 .product .product-line {
-    width: 300px;
+    width: 18.75rem;
     height: auto;
-    margin: 0 calc(50vw - 150px);
+    margin: 0 calc(50vw - 9.375rem);
     transform: rotate(180deg);
 }
 
 h3 {
-    font-size: clamp(12px, 3vw, 25px);
+    font-size: clamp(0.75rem, 3vw, 1.5625rem);
     text-align: center;
-    margin-bottom: 20px;
-    border-bottom: solid white 3px;
+    margin-bottom: 1.25rem;
+    border-bottom: solid white 0.1875rem;
     width: fit-content;
     justify-self: center;
 }
 
 .showcase {
     margin: 0 auto;
-    margin-top: 20px;
-    width: clamp(0px, 80vw, 1200px);
+    margin-top: 1.25rem;
+    width: clamp(0rem, 80vw, 75rem);
     background-color: black;
-    padding: 20px 40px 40px 40px;
-    border-radius: 10px;
-    box-shadow: 3px 4px 2px rgb(0, 0, 0);
+    padding: 1.25rem 2.5rem 2.5rem 2.5rem;
+    border-radius: 0.625rem;
+    box-shadow: 0.1875rem 0.25rem 0.125rem rgb(0, 0, 0);
 }
 
-.showcase div{
+.showcase div {
     flex-direction: row;
     gap: 3vw;
 }
 
 .showcase div p {
-    font-size: clamp(10px, 2.4vw, 20px);
+    font-size: clamp(0.625rem, 2.4vw, 1.25rem);
     align-content: center;
-    line-height: 20px;
+    line-height: 1.25rem;
 }
 
 .showcase:hover {
@@ -250,25 +266,25 @@ h3 {
 /* Style Image Roll */
 
 .imageroll {
-    height: 300px;
+    height: 18.75rem;
     position: relative;
     overflow: hidden;
     width: 100%;
-    padding-top: 50px;
+    padding-top: 3.125rem;
     background: radial-gradient(
         ellipse 80% 100% at 50% 10%,
         rgb(255, 216, 165) -10%,
         #fffcdc 70%,
         rgb(255, 165, 55) 150%
-        );
+    );
 }
 
 .imagetable {
     background-color: rgb(255, 224, 158);
     margin: auto;
-    width: calc(100vw - 100px);
-    height: 250px;
-    border-radius: 50px;
+    width: calc(100vw - 6.25rem);
+    height: 15.625rem;
+    border-radius: 3.125rem;
     z-index: 1;
     position: absolute;
     inset: 0;
@@ -281,16 +297,16 @@ h3 {
     align-items: center;
     z-index: 2;
     pointer-events: none;
-    gap: 44px;
+    gap: 2.75rem;
     width: 90vw;
     justify-content: center;
     overflow: visible;
 }
 
 .scroller img {
-    width: 250px;
+    width: 15.625rem;
     transition: transform 0.3s ease;
-    border-radius: 30px;
+    border-radius: 1.875rem;
 }
 
 .arrow-buttons {
@@ -298,15 +314,15 @@ h3 {
     justify-self: center;
     align-items: center;
     z-index: 10;
-    top: calc(50% - 25px);
+    top: calc(50% - 1.5625rem);
     position: absolute;
     flex-direction: row;
-    gap: clamp(290px, 50vw, 900px);
+    gap: clamp(12rem, 50vw, 54rem);
 }
 
 .arrow-right, .arrow-left {
-    width: 50px;
-    height: 50px;
+    width: 3.125rem;
+    height: 3.125rem;
 }
 
 .arrow-right:hover, .arrow-left:hover {
@@ -317,26 +333,27 @@ h3 {
 
 .buttons {
     background-color: black;
-    height: 300px;
+    height: 18.75rem;
     color: white;
-    font-size: 20px;
-    padding: 50px;
+    font-size: 1.25rem;
+    padding: 3.125rem;
 }
 
 .vertical-buttons {
     flex-direction: column;
     justify-content: space-evenly;
-    height: 200px;
+    height: 12.5rem;
     align-items: center;
     align-content: center;
-    width: clamp(0px, 40vw, 700px);
+    width: clamp(0rem, 40vw, 43.75rem);
     margin: 0 auto;
 }
 
 .vertical-buttons a {
-    padding: 10px;
+    text-align: center;
+    padding: 0.625rem;
     background-color: #d9d9d9;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     height: fit-content;
     align-self: center;
     text-decoration: none;
@@ -349,76 +366,83 @@ h3 {
 
 .vertical-buttons div {
     align-content: center;
-    gap: 10px;
+    gap: 0.625rem;
 }
 
 .line {
-    z-index: 10;
-    width: 300px;
+    width: 18.75rem;
     position: absolute;
-    margin: 0 calc(50% - 200px);
+    margin: 0 calc(50% - 12.5rem);
 }
 
 .tradeshow-date {
-    margin-top: 50px;
     text-align: center;
-    font-size: 25px;
+    font-size: 1.5625rem;
+    width: clamp(20rem, 80vw, 33rem);
 }
 
-/* ------------------------------------ STYLE ABOUT ------------------------------------ */
+/* ------------------------------------ STYLE CONTACT ------------------------------------ */
 
-.about-header, .products-header {
-    padding-bottom: 30px;
+.contact-header {
+    padding-bottom: 0;
 }
 
-.mission-paragraph, .mentorship, .charity{
+.info-box {
+    flex-direction: column;
+    justify-content: space-around;
+    color: black;
+    background-color: rgb(255, 231, 175);
+    padding: 0.5rem 2rem;
+    width: 15rem;
+    height: clamp(6rem, 20vh, 8.5rem);
+    border-radius: 2.5rem;
+    box-shadow: 0.1875rem 0.25rem 0.125rem rgba(0, 0, 0, 1);
+}
+
+.info-box h2 {
+    text-align: left;
+    text-decoration: none;
+    font-size: clamp(1.875rem, 3vw, 2.1875rem);
+    padding: 0;
+}
+
+.arrow-link {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #000000;
+}
+
+.info-box a:hover {
+    font-size: 1.6rem;
+    text-decoration: underline;
+}
+
+.contact-flexer {
+    height: 90vh;
+    justify-content: center;
     flex-direction: row;
-    justify-content: space-between;
-    background-color: black;
-    margin: 20px 5vw 20px 0;
     align-items: center;
-    padding: 5vh 5vw;
-    gap: 10%;
-    color: white;
-    height: fit-content;
-    min-height: 140px;
-    max-height: 170px;
+    gap: 3vw;
 }
 
-.mentorship {
-    margin: 20px 0 20px 5vw;
-    border-top-left-radius: 40px;
-    border-bottom-left-radius: 40px;
+.contact-body {
+    background: radial-gradient(circle at left, rgb(255, 209, 116), rgb(255, 232, 167));
 }
 
-.mission-paragraph, .charity {
-    border-top-right-radius: 40px;
-    border-bottom-right-radius: 40px;
+@media (max-width: 62.5rem) {
+    .contact-flexer {
+        flex-direction: column;
+        gap: 3vh;
+    }
 }
 
-.side-image {
-    height: calc(140px + 10vh);
-    min-height: 140px;
-    border-radius: 40px;
-}
-
-.informationals-left {
-    margin-right: 5%;
-    align-items: center;
-}
-
-.informationals-right {
-    margin-left: 5%;
-    align-items: center;
-}
-
-/* ------------------------------------ STYLE PRE_ORDER ------------------------------------ */
+/* ------------------------------------ STYLE PRODUCTS ------------------------------------ */
 
 .products-header h2 {
-    font-size: 3rem;
+    font-size: clamp(2.7rem, 7vw, 3rem);
     font-weight: 400;
-    margin-left: calc(40vw - 150px);
-    margin-top: 20px;
+    margin-left: clamp(3rem, calc(40vw - 9.375rem), 90rem);
+    margin-top: 1.25rem;
     text-align: left;
     width: fit-content;
 }
@@ -426,30 +450,33 @@ h3 {
 .product-summary {
     gap: 2rem;
     align-items: flex-start;
-    max-width: 900px;
+    width: 90vw;
+    max-width: 56.25rem;
     margin: 0 auto;
     background: linear-gradient(to right, #ffbf5f, #fffcdc);
-    border-radius: 20px;
+    border-radius: 1.25rem;
 }
 
 .product-display {
-    width: 450px;
-    border-radius: 20px;
+    width: 90vw;
+    max-width: 28.125rem;
+    border-radius: 1.25rem;
 }
 
 .product-paragraph {
     flex-direction: column;
     align-items: flex-start;
-    max-width: 450px;
+    width: 80vw;
+    max-width: 28.125rem;
 }
 
 .product-paragraph div:last-child {
-    margin: 30px 0;
-    font-size: 20px;
+    margin: 2rem 0;
+    font-size: 1.22rem;
 }
 
 .product-paragraph div:first-of-type {
-    font-size: 25px;
+    font-size: 1.5625rem;
     font-weight: 100;
 }
 
@@ -458,39 +485,38 @@ strong {
 }
 
 .product-paragraph h3 {
-    margin: 10px 0 30px;
+    margin: 0.625rem 0 1.875rem;
     border: none;
-    font-size: clamp(2.0rem, 3vw, 2.5rem);
+    font-size: clamp(2rem, 3vw, 2.5rem);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 50rem) {
     .product-summary {
         flex-direction: column;
         align-items: center;
         background: linear-gradient(to bottom, #ffbf5f, #fffcdc);
         width: fit-content;
     }
-
     .product-paragraph {
-        max-width: 400px;
+        max-width: 25rem;
     }
 }
 
 .order-info {
     flex-direction: column;
-    gap: 20px;
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 0 2rem;
+    gap: 1.25rem;
+    width: 85vw;
+    max-width: 31.25rem;
+    margin: 3rem auto;
     text-align: left;
 }
 
 .order-info h4 {
-    font-size: clamp(1.3rem, 3vw, 1.6rem);
+    font-size: clamp(1.43rem, 3vw, 1.6rem);
     margin-bottom: 0.25rem;
 }
 
 .order-info p {
-    font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+    font-size: clamp(0.98rem, 2vw, 1.05rem);
     line-height: 1.6;
 }
