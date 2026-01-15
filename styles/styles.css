@@ -186,7 +186,7 @@ h2 {
 
 .mission-holder {
     padding: 0;
-    max-width: calc(100vw - 1rem + 1px);
+    max-width: calc(100vw);
 }
 
 .index-header {
