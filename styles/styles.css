@@ -115,29 +115,22 @@ footer p:last-child {
 
 .background {
     position: fixed;
+    width: 100vw;
+    justify-content: space-between;
     top: 3.75rem;
     left: 50%;
     transform: translateX(-50%);
-    gap: clamp(0rem, 30vw, 15.125rem);
     z-index: -1;
-    width: fit-content;
 }
 
-.leftpaw, .rightpaw {
-    height: auto;
-    max-width: calc(40vw - 6.875rem);
-    min-width: 4rem;
-    aspect-ratio: 2 / 4;
-}
+.rightpaw {
+    max-width: 20rem;
+    height: fit-content;
+} /* FIX THIS */
 
 .leftpaw {
-    transform: rotate(10deg);
-}
-
-@media (max-width: 30rem) {
-    .leftpaw, .rightpaw {
-        margin-top: 2rem;
-    }
+    max-width: 20vw;
+    margin-top: 40vh;
 }
 
 /* Style introduction bits */
