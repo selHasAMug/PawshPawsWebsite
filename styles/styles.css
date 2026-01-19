@@ -1,6 +1,6 @@
 /* ------------------------------------ GLOBAL ------------------------------------ */
 
-#flex {
+.flex {
     display: flex;
 }
 
@@ -54,7 +54,6 @@ footer {
     background-color: black;
     color: #d3d3d3;
     text-align: center;
-    height: fit-content;
     padding-top: 2.5rem;
 }
 
@@ -115,7 +114,7 @@ footer p:last-child {
 
 .background {
     position: fixed;
-    width: 100vw;
+    width: 100%;
     justify-content: space-between;
     top: 3.75rem;
     left: 50%;
@@ -126,25 +125,26 @@ footer p:last-child {
 .rightpaw {
     max-width: 20rem;
     height: fit-content;
-} /* FIX THIS */
+    opacity: 0.3;
+}
 
 .leftpaw {
     max-width: 20vw;
     margin-top: 40vh;
+    opacity: 0.3;
 }
 
 /* Style introduction bits */
 
 .intro {
     height: 22.5rem;
-    width: 100vw;
+    width: 100%;
     text-align: center;
-    align-content: center;
     padding: 3.125rem 0;
 }
 
 h1 {
-    font-size: clamp(0rem, 7.5vw, 4.375rem);
+    font-size: clamp(1rem, 7.5vw, 4.375rem);
     margin-bottom: 2.5rem;
     text-align: center;
 }
@@ -157,7 +157,7 @@ h2 {
 
 .mission p {
     max-width: 33vw;
-    font-size: clamp(0rem, 2.4vw, 1.0625rem);
+    font-size: clamp(1rem, 2.4vw, 1.0625rem);
     margin: 0 auto;
     padding-bottom: 0.8125rem;
     line-height: 1.25rem;
@@ -179,7 +179,7 @@ h2 {
 
 .mission-holder {
     padding: 0;
-    max-width: calc(100vw);
+    max-width: 100%;
 }
 
 .index-header {
@@ -195,12 +195,11 @@ h2 {
     }
     .mission-holder {
         background-color: black;
-        height: fit-content;
         width: 100vw;
         padding: 3.125rem 0;
     }
     .mission p {
-        font-size: clamp(0rem, 3vw, 1.0625rem);
+        font-size: clamp(0.4rem, 3vw, 1.0625rem);
         max-width: 90%;
     }
 }
@@ -209,7 +208,6 @@ h2 {
 
 .product {
     background: radial-gradient(circle at center, rgb(63, 63, 63), black);
-    height: fit-content;
     color: white;
     flex-direction: column;
     justify-content: center;
@@ -226,17 +224,17 @@ h2 {
 .product .product-line {
     width: 18.75rem;
     height: auto;
-    margin: 0 calc(50vw - 9.375rem);
+    display: block;
+    margin: 0 auto;
     transform: rotate(180deg);
 }
 
 h3 {
     font-size: clamp(0.75rem, 3vw, 1.5625rem);
     text-align: center;
-    margin-bottom: 1.25rem;
     border-bottom: solid white 0.1875rem;
     width: fit-content;
-    justify-self: center;
+    margin: 0 auto 1.25rem auto;
 }
 
 .showcase {
@@ -256,7 +254,7 @@ h3 {
 
 .showcase div p {
     font-size: clamp(0.625rem, 2.4vw, 1.25rem);
-    align-content: center;
+    margin: auto 0;
     line-height: 1.25rem;
 }
 
@@ -290,7 +288,7 @@ h3 {
 .imagetable {
     background-color: rgb(255, 224, 158);
     margin: auto;
-    width: calc(100vw - 6.25rem);
+    width: calc(100% - 6.25rem);
     height: 15.625rem;
     border-radius: 3.125rem;
     z-index: 1;
@@ -318,7 +316,6 @@ h3 {
 }
 
 .arrow-buttons {
-    display: flex;
     justify-self: center;
     align-items: center;
     z-index: 10;
@@ -362,7 +359,6 @@ h3 {
     padding: 0.625rem;
     background-color: #d9d9d9;
     border-radius: 0.625rem;
-    height: fit-content;
     align-self: center;
     text-decoration: none;
     color: #d7800f;
@@ -373,14 +369,14 @@ h3 {
 }
 
 .vertical-buttons div {
-    align-content: center;
     gap: 0.625rem;
 }
 
 .line {
     width: 18.75rem;
     position: absolute;
-    margin: 0 calc(50% - 12.5rem);
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .tradeshow-date {
@@ -426,7 +422,7 @@ h3 {
 }
 
 .contact-flexer {
-    height: 90vh;
+    min-height: 90vh;
     justify-content: center;
     flex-direction: row;
     align-items: center;
@@ -452,13 +448,12 @@ h3 {
     margin-left: clamp(3rem, calc(40vw - 9.375rem), 90rem);
     margin-top: 1.25rem;
     text-align: left;
-    width: fit-content;
 }
 
 .product-summary {
     gap: 2rem;
     align-items: flex-start;
-    width: 90vw;
+    width: fit-content;
     max-width: 56.25rem;
     margin: 0 auto;
     background: linear-gradient(to right, #ffbf5f, #fffcdc);
@@ -503,7 +498,6 @@ strong {
         flex-direction: column;
         align-items: center;
         background: linear-gradient(to bottom, #ffbf5f, #fffcdc);
-        width: fit-content;
     }
     .product-paragraph {
         max-width: 25rem;
