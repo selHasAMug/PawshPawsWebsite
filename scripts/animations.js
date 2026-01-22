@@ -23,7 +23,7 @@ updateScale();
 
 function moveImages(direction) {
     x += 262 * direction;
-    x = Math.min(730, Math.max(x, -730))
+    x = Math.min(764, Math.max(x, -764))
     images.forEach(img => {
         img.style.transform = `translateX(${x}px)`;
     });
